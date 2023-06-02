@@ -31,7 +31,6 @@ class Comensal(threading.Thread):
 
         semaforoPlato.acquire()
         try:
-            # if platosDisponibles == 0:
             while platosDisponibles == 0:
                 semaforoCocinero.release()
                 semaforoPlato.acquire()
@@ -45,8 +44,6 @@ semaforoCocinero = threading.Semaphore(0)
 
 platosDisponibles = 3
 
-# cocinero = Cocinero()
-# cocinero.start()
 Cocinero().start()
 
 for i in range(34):
