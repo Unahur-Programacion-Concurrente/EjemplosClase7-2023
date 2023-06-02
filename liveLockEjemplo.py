@@ -5,7 +5,7 @@ from threading import Lock
 
 def tarea(numero, lock1, lock2):
     # loop until the task is completed
-    while True:
+    for i in range(10):
         # adquiere el primer lock
         with lock1:
             sleep(0.1)

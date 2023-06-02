@@ -2,9 +2,10 @@ import threading
 import time
 
 def tarea(lock, identificador):
-    with lock:
         # executa tarea
-        for i in range(5):
+    for i in range(5):
+        time.sleep(0.000001)
+        with lock:
             # simula procesamiento
             print(f'Hilo {identificador} ejecutando')
             time.sleep(1)
