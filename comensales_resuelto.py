@@ -46,5 +46,5 @@ platosDisponibles = 3
 
 Cocinero().start()
 
-for i in range(34):
+for i in range(5):
     Comensal(i).start()
